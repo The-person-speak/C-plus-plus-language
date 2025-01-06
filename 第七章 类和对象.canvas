@@ -1,0 +1,21 @@
+{
+	"nodes":[
+		{"id":"a40ff7175227c403","x":-340,"y":-160,"width":180,"height":50,"type":"text","text":"# 类和对象"},
+		{"id":"2befd350a6f97d14","x":-120,"y":-460,"width":258,"height":50,"type":"text","text":"## 类和对象的定义"},
+		{"id":"b94eae25e2c7fe41","x":25,"y":-110,"width":332,"height":60,"type":"text","text":"## 面对对象程序设计"},
+		{"id":"9692cbd2dad36f5d","x":25,"y":40,"width":250,"height":60,"type":"text","text":"## 对象数组"},
+		{"id":"d512c084ff99ac53","x":-20,"y":260,"width":250,"height":60,"type":"text","text":"## 对象函数"},
+		{"id":"abb99123dbbb406b","x":0,"y":-336,"width":332,"height":56,"type":"text","text":"## 构造函数和析构函数"},
+		{"id":"8c56fb263ab15da2","x":440,"y":-536,"width":340,"height":456,"type":"text","text":"定义构造函数：\n\tclass Clock{\n\t\tpublic:\n\t\t\tClock(int H, int M, int S);\n\t\tprivate:\n\t\t\tint Hour;\n\t\t\tint Minute;\n\t\t\tint Second;\n\t};\n\tClock::Clock(int H, int M, int S){\n\t\tHour = H;\n\t\tMinute = M;\n\t\tSecond = S；\n\t}\n\tClock MyClock(12, 0, 1);"},
+		{"id":"0c52f8c99839feaf","x":440,"y":-50,"width":545,"height":320,"type":"text","text":"析构函数：\n1. 与构造函数相反，当对象生存期结束时，需要调用析构函数，释放对象所占的内存空间。\n2. 特点：\n\t1. 访问属性：公有成员函数\n\t2. 函数名：在类名前加“~”构成\n\t3. 无参数、无返回值。能否重载？\n\t4. 自动生成\n\t\t\t析构函数是在对象生存期即将结束的时刻由系统自动调用的。如果程序员没有定义析构函数，系统将自动生成和调用一个默认析构函数"}
+	],
+	"edges":[
+		{"id":"5020c1ff32c38983","fromNode":"a40ff7175227c403","fromSide":"right","toNode":"2befd350a6f97d14","toSide":"left"},
+		{"id":"32dec04591f3e00b","fromNode":"a40ff7175227c403","fromSide":"right","toNode":"abb99123dbbb406b","toSide":"left"},
+		{"id":"b969b8d8cef2b330","fromNode":"a40ff7175227c403","fromSide":"right","toNode":"b94eae25e2c7fe41","toSide":"left"},
+		{"id":"95747c4c154bba58","fromNode":"a40ff7175227c403","fromSide":"right","toNode":"9692cbd2dad36f5d","toSide":"left"},
+		{"id":"90f2c87c0b35354c","fromNode":"a40ff7175227c403","fromSide":"right","toNode":"d512c084ff99ac53","toSide":"left"},
+		{"id":"78c5f78aea93ee62","fromNode":"abb99123dbbb406b","fromSide":"right","toNode":"8c56fb263ab15da2","toSide":"left"},
+		{"id":"ac400e9aca357e4b","fromNode":"abb99123dbbb406b","fromSide":"right","toNode":"0c52f8c99839feaf","toSide":"left"}
+	]
+}

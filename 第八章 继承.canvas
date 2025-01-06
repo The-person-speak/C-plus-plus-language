@@ -1,0 +1,31 @@
+{
+	"nodes":[
+		{"id":"4b221d38bdf2d1ff","x":-20,"y":-380,"width":250,"height":60,"type":"text","text":"基类和派生类"},
+		{"id":"70ed00d8c02e875d","x":-20,"y":-263,"width":250,"height":60,"type":"text","text":"派生类的构造和析构"},
+		{"id":"9068116addcd0cd9","x":-20,"y":-100,"width":250,"height":60,"type":"text","text":"多继承"},
+		{"id":"688afacd70da5b9d","x":-20,"y":20,"width":250,"height":60,"type":"text","text":"对继承的深入理解"},
+		{"id":"41a13b88c4b38484","x":-380,"y":-263,"width":111,"height":60,"type":"text","text":"继承"},
+		{"id":"deaab3b99803e7bf","x":360,"y":-570,"width":540,"height":160,"type":"text","text":"1. 面向对象程序设计的难点不在于如何写函数，而在于如何发现类，规划每一个类所需完成的功能，以及准确界定各个类之间的关系\n2. 若派生类只有一个直接基类，则称这种继承方式为单继承；若拍摄了由多个直接基类，则称为多继承"},
+		{"id":"f3d50fae9e9bd93f","x":-20,"y":-520,"width":250,"height":60,"type":"text","text":"继承的概念"},
+		{"id":"b6352867f05b9409","x":360,"y":-380,"width":460,"height":147,"type":"text","text":"派生类继承了基类中的所有成员，但不包括：\n1. 构造函数\n2. 析构函数\n3. 默认赋值运算符"},
+		{"id":"17e3fc660ade8a90","x":360,"y":-210,"width":540,"height":110,"type":"text","text":"不同继承方式决定的不同访问控制权限体现在：\n1. 派生类的成员函数对其继承的基类成员的访问控制；\n2. 其他模块通过派生类对象对其继承的基类成员的访问控制"},
+		{"id":"a71bbd9a07201f69","x":420,"y":20,"width":643,"height":293,"type":"text","text":"1. 基类的构造函数和析构函数本被派生类所继承；\n2. 派生类一般需要定义自己的构造函数和析构函数；\n3. 派生类的构造及析构函数通常会受到基类构造及析构函数的影响。\n4. 基类只有无参数构造函数\n\t1. 在基类具有无参构造函数，派生类又没有定义构造函数的时候，系统会自动调用基类的午餐构造函数来构造派生类对象中的基类成分\n\t2. 基类的构造函数一般被声明为public访问控制方式。若基类提供了一些构造函数，并且只希望由派生类使用这些构造函数，那么就需要在基类中将这样的特殊构造函数定位protected。"},
+		{"id":"a915eeca2129de86","x":420,"y":360,"width":660,"height":160,"type":"text","text":"多继承类结构中，派生类可能有多个直接基类或间接基类或间接基类\n1. 可能会引起成员访问的二义性或不确定性问题\n2. 基类数据成员和成员函数继承到两个派生类，然后又继承到第二级派生类，基类的成员有两份拷贝"},
+		{"id":"81df779083fc0d9c","x":420,"y":-70,"width":140,"height":60,"type":"text","text":"同名覆盖"},
+		{"id":"22e75c22721746a3","x":435,"y":600,"width":425,"height":160,"type":"text","text":"1. 将共同基类设置为虚基类，创建派生类对象时，虚基类的构造函数指挥调用一次，虚基类的成员在第三层派生类对象中就只有一份拷贝，不会在引起二义性问题。\n2. 将共同基类设置为虚基类，需要子第一季派生类时就用关键字virtual 修饰说明继承关系，期语法形式："}
+	],
+	"edges":[
+		{"id":"6fd849abebea5efa","fromNode":"41a13b88c4b38484","fromSide":"right","toNode":"f3d50fae9e9bd93f","toSide":"left"},
+		{"id":"7907733b950b2327","fromNode":"41a13b88c4b38484","fromSide":"right","toNode":"4b221d38bdf2d1ff","toSide":"left"},
+		{"id":"1899cfc017d1d8cc","fromNode":"41a13b88c4b38484","fromSide":"right","toNode":"70ed00d8c02e875d","toSide":"left"},
+		{"id":"1e4541250df507b1","fromNode":"41a13b88c4b38484","fromSide":"right","toNode":"9068116addcd0cd9","toSide":"left"},
+		{"id":"21d0e0ce905cba6f","fromNode":"41a13b88c4b38484","fromSide":"right","toNode":"688afacd70da5b9d","toSide":"left"},
+		{"id":"8a2554e8a02f7efd","fromNode":"f3d50fae9e9bd93f","fromSide":"right","toNode":"deaab3b99803e7bf","toSide":"left"},
+		{"id":"86eba6eba2a4b764","fromNode":"4b221d38bdf2d1ff","fromSide":"right","toNode":"b6352867f05b9409","toSide":"left"},
+		{"id":"e7965e6b4d8ae50d","fromNode":"4b221d38bdf2d1ff","fromSide":"right","toNode":"17e3fc660ade8a90","toSide":"left"},
+		{"id":"98d99f37a57bbaf9","fromNode":"9068116addcd0cd9","fromSide":"right","toNode":"81df779083fc0d9c","toSide":"left"},
+		{"id":"23ea67ca6f4ce4db","fromNode":"9068116addcd0cd9","fromSide":"right","toNode":"a71bbd9a07201f69","toSide":"left"},
+		{"id":"df8d47509d2344d2","fromNode":"9068116addcd0cd9","fromSide":"right","toNode":"a915eeca2129de86","toSide":"left"},
+		{"id":"f5e8014ed519c4d7","fromNode":"9068116addcd0cd9","fromSide":"right","toNode":"22e75c22721746a3","toSide":"left"}
+	]
+}

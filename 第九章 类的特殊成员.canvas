@@ -1,0 +1,43 @@
+{
+	"nodes":[
+		{"id":"1e9fb6777e9c1f11","type":"text","text":"类的静态成员","x":-60,"y":-320,"width":250,"height":60},
+		{"id":"cccd1df60db758e8","type":"text","text":"类的特殊成员","x":-680,"y":80,"width":250,"height":60},
+		{"id":"b8b4045557f76e93","type":"text","text":"1. 是由该类的所有对象共同维护和使用\n2. 它是类的数据成员的一种特例，采用static关键字来声明，每个类只有一个副本。用来实现了同一类的不同对象之间的数据共享\n3. 它具有静态生存期，可以由类的任何一个对象来访问\n\t\t语法格式：类名::标识符\n\t类的声明中之恩声明静态数据成员的存在，静态数据成员的初始化需要在类的外部进行","x":405,"y":-373,"width":790,"height":167},
+		{"id":"eea61be9a39314ae","type":"text","text":"1. 用来解决同一个类的不同对象之间数据和函数的共享问题\n2. 包括：\n\t1. 类的静态数据成员\n\t2. 类的静态成员函数\n","x":405,"y":-600,"width":385,"height":160},
+		{"id":"243d47e5fe9325c1","x":405,"y":80,"width":575,"height":220,"type":"text","text":"常对象\n1. 定义对象是使用从上图进行修饰，称为常对象\n2. 声明的语法形式：类名从上图对象名\n3. 常对象的数据成员值在对象的整个生存期间没不能被改变\n\t常对象子在定义时必须进行初始化而且不能被更新\n4. 常对象只能调用常成员函数，以保证常对象的数据成员不被修改 "},
+		{"id":"8849f44ee05c139b","x":405,"y":-180,"width":775,"height":220,"type":"text","text":"静态成员函数：\n1. 是使用static关键字声明的成员函数\n2. 静态成员函数也属于整个类，由一个类的所有对象共享\n3. 对于共有静态成员函数，可以通过“类名::静态成员函数名”来调用\n\t1. 在创建任何对象前，这类函数就可以被调用\n\t2. 也可以通过对象调用"},
+		{"id":"7ae376985203ccc7","x":405,"y":320,"width":635,"height":340,"type":"text","text":"常成员函数\n1. 类成员函数使用const关键字修饰，称为常成员函数\n常成员函数具有以下特点：\n1. const是函数类型的一个组成部分，在函数实现时也要带const关键字\n2. 常成员函数不能更新对象的数据成员，也不能调用该类中的非常成员函数\n3. 常对象只能调用常成员函数，但是常成员函数可以被普通对象调用\n4. const关键字可被用于参与对重载函数的区分\n\t1. 在类中这样声明是对print 函数的有效重载\n\t\t1. void print();\n\t\t2. void print() const;"},
+		{"id":"8fbb7dbb46a76700","x":418,"y":680,"width":542,"height":360,"type":"text","text":"常数据成员\n1. 使用const说明的数据成员称为常数据成员\n2. 常数据成员一经初始化就不能再被改变\n3. 构造函数对常数据成员进行初始化，只能通过初始化列表\n4. 初始化列表\n\t\t在构造函数的函数头后面，用”:“链接的一组参数表\n\t\t类名::类名(参数表)：初始化列表\n\t\t{\n\t\t\n\t\t}\n\t\t初始化列表的形式为：成员名1(初始值)，成员名2(初始值),..."},
+		{"id":"dffb70f1ddfc32ee","type":"text","text":"常对象和常成员","x":-80,"y":490,"width":250,"height":60},
+		{"id":"a1a5c28972372b97","type":"text","text":"类的组合","x":-40,"y":1000,"width":250,"height":60},
+		{"id":"9c75e732a6ec9bac","x":418,"y":1040,"width":782,"height":740,"type":"text","text":"1. 在面向对象程序设计中，可以对复杂对象进行分解、抽象，把一个复杂对象分解为简单对象的组合\n2. 对于较复杂的问题可以使用类的组合来描述\n\t 采用部件组装的方法，利用已定义的类来构成新类\n3. 类的组合（类的聚集），描述的是一个类内嵌其他类的对象作为数据成员的情况 \n4. 当创建组合类的对象时，各个内嵌对象也将被自动创建\n5. 创建组合类对象时：\n\t1. 要对被类的基本数据成员进行初始化\n\t2. 要对内嵌对象成员进行初始化，内嵌对象的构造函数的调用以及构造函数的参数传递，需要使用初始化列表来完成\n6. 组合类构造函数定义的一般形式为：\n\t1. 类名::类名(形参表):内嵌对象1(参数表), 内嵌对象2(参数表),...\n\t\t{\n\t\t\n\t\t}\n7. 初始化列表用来完成内嵌对象的初始化\n\t\t调用内嵌对象的构造函数以及为构造函数传递的参数\n8. 当定义一个组合类的对象时，构造函数的调用顺序如下\n\t1. 按照内嵌对象在组合类的声明中出现的次序，依次调用其内嵌对象的构造函数\n\t2. 执行本类的构造函数的函数体\n\t3. 如果声明组合类的对象时没有指定对象的初始值，则自动调用无参构造函数，相应地，也调用内嵌对象地无参构造函数。\n9. 组合类的对象销毁时，析构函数地调用、执行顺序与构造函数刚好相反 "},
+		{"id":"c1aaf251f71da5d4","type":"text","text":"运算符重载","x":-900,"y":1230,"width":250,"height":60},
+		{"id":"fefa2a370b459a4b","type":"text","text":"友元","x":-500,"y":1290,"width":180,"height":50},
+		{"id":"9a2cbd6970efc24e","x":-230,"y":1130,"width":490,"height":160,"type":"text","text":"友元是可以访问类的私有成员和保护成员的外部成员\n1. 在一个类中，可以利用关键字friend将外部成员（一般函数、其他类的成员函数或其他类）声明为本类的友元\n2. 类中本来隐藏的信息（私有和保护成员）可以被友元访问"},
+		{"id":"63d9cbfcc592e555","x":-223,"y":1360,"width":483,"height":202,"type":"text","text":"友元提供了不同类的成员函数之间、类的成员函数与一般函数之间进行数据共享的机制\n1. 从封装的角度讲，友元是对数据隐藏的破坏\n2. 很多情况，考虑到数据共享的必要性，为了提佛啊程序的效率，这种“小破坏”还是必要的"},
+		{"id":"952ac27d07667874","x":-230,"y":1580,"width":490,"height":240,"type":"text","text":"友元函数\n1. 声明为友元的是一般函数或是另一类的成员函数\n2. 是在类声明中由关键字friend修饰的非成员函数\n\t1. 一般函数\n\t2. 另一个类的成员函数\n3. 它不是本类的成员函数，但是在它的函数体中可以通过对象名访问本类的私有和保护成员"},
+		{"id":"e720bbfecfe91f8d","x":-230,"y":1896,"width":600,"height":164,"type":"text","text":"友元类\n1. 在类的声明中可以声明另一个类为本类的有缘，这时称为友元类\n2. 是在类的声明中由关键字friend修饰的其他类\n3. 若A类是B类的友元类，则A类的所有成员函数都是B类的友元函数，都可以访问B类的私有和保护成员"},
+		{"id":"f656f9180bfa1a8e","x":-80,"y":2140,"width":300,"height":80,"type":"text","text":"1. 友元关系是不能传递的\n2. 友元关系是单向的"},
+		{"id":"642a515650e66de9","type":"text","text":"类的组合与派生","x":-1540,"y":1230,"width":250,"height":60}
+	],
+	"edges":[
+		{"id":"08d608489a1bb4d1","fromNode":"1e9fb6777e9c1f11","fromSide":"left","toNode":"cccd1df60db758e8","toSide":"right"},
+		{"id":"125f839920f5e1bb","fromNode":"dffb70f1ddfc32ee","fromSide":"left","toNode":"cccd1df60db758e8","toSide":"right"},
+		{"id":"d3be0dd5ba8d005a","fromNode":"a1a5c28972372b97","fromSide":"left","toNode":"cccd1df60db758e8","toSide":"right"},
+		{"id":"a13cb1a553d428cb","fromNode":"fefa2a370b459a4b","fromSide":"left","toNode":"cccd1df60db758e8","toSide":"right"},
+		{"id":"f0eaadda229b7314","fromNode":"c1aaf251f71da5d4","fromSide":"left","toNode":"cccd1df60db758e8","toSide":"right"},
+		{"id":"1e3834e6e0871560","fromNode":"642a515650e66de9","fromSide":"left","toNode":"cccd1df60db758e8","toSide":"right"},
+		{"id":"59357a746e8c50da","fromNode":"1e9fb6777e9c1f11","fromSide":"right","toNode":"eea61be9a39314ae","toSide":"left"},
+		{"id":"3959b9e874d91e20","fromNode":"1e9fb6777e9c1f11","fromSide":"right","toNode":"b8b4045557f76e93","toSide":"left"},
+		{"id":"a2f617b6ea8779a6","fromNode":"1e9fb6777e9c1f11","fromSide":"right","toNode":"8849f44ee05c139b","toSide":"left"},
+		{"id":"8db64a359d0b83e7","fromNode":"dffb70f1ddfc32ee","fromSide":"right","toNode":"243d47e5fe9325c1","toSide":"left"},
+		{"id":"93d65050d7b95ade","fromNode":"dffb70f1ddfc32ee","fromSide":"right","toNode":"7ae376985203ccc7","toSide":"left"},
+		{"id":"2aec714817d248ea","fromNode":"dffb70f1ddfc32ee","fromSide":"right","toNode":"8fbb7dbb46a76700","toSide":"left"},
+		{"id":"bbea7b426060f79f","fromNode":"a1a5c28972372b97","fromSide":"right","toNode":"9c75e732a6ec9bac","toSide":"left"},
+		{"id":"749938e4b9553008","fromNode":"fefa2a370b459a4b","fromSide":"right","toNode":"9a2cbd6970efc24e","toSide":"left"},
+		{"id":"76d31489b9fa2fd6","fromNode":"fefa2a370b459a4b","fromSide":"right","toNode":"63d9cbfcc592e555","toSide":"left"},
+		{"id":"afe39b188777cde1","fromNode":"fefa2a370b459a4b","fromSide":"right","toNode":"952ac27d07667874","toSide":"left"},
+		{"id":"d2cf4f14e05eabae","fromNode":"952ac27d07667874","fromSide":"bottom","toNode":"e720bbfecfe91f8d","toSide":"top"},
+		{"id":"d402b10125345433","fromNode":"e720bbfecfe91f8d","fromSide":"bottom","toNode":"f656f9180bfa1a8e","toSide":"top"}
+	]
+}
